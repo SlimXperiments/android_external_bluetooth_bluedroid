@@ -876,11 +876,17 @@ and USER_HW_DISABLE_API macros */
 
 #if (BLUETOOTH_QCOM_SW == TRUE) /* Enable WBS only under this flag.*/
 #define BTM_WBS_INCLUDED            TRUE
+#define BTC_INCLUDED                TRUE
 #endif
 
 /* Includes WBS if TRUE */
 #ifndef BTM_WBS_INCLUDED
 #define BTM_WBS_INCLUDED            FALSE       /* TRUE includes WBS code */
+#endif
+
+/* BTC */
+#ifndef BTC_INCLUDED
+#define BTC_INCLUDED FALSE
 #endif
 
 /* Includes PCM2 support if TRUE */
@@ -3368,16 +3374,6 @@ Range: Minimum 12000 (12 secs) on BR/EDR when supporting PBF.
 #define HCRPM_MAX_CLIENTS           3
 #endif
 
-
-/******************************************************************************
-**
-** BTC
-**
-******************************************************************************/
-
-#ifndef BTC_INCLUDED
-#define BTC_INCLUDED                FALSE
-#endif
 
 /******************************************************************************
 **
