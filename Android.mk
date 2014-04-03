@@ -11,6 +11,10 @@ else
   bdroid_CFLAGS += -DHAS_NO_BDROID_BUILDCFG
 endif
 
+ifeq($(TARGET_USES_CAF_FEATURES),true)
+  bdroid_CFLAGS += -DUSES_CAF_FEATURES
+endif
+
 include $(call all-subdir-makefiles)
 
 # Cleanup our locals

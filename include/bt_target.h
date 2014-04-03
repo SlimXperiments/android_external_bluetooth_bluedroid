@@ -71,8 +71,12 @@
 #endif
 
 /* This feature is used to update any QCOM related changes in the stack*/
-#ifndef BLUETOOTH_QCOM_SW
+#ifdef USES_CAF_FEATURES
 #define BLUETOOTH_QCOM_SW TRUE
+#endif
+
+#ifndef BLUETOOTH_QCOM_SW
+#define BLUETOOTH_QCOM_SW FALSE
 #endif
 
 #ifndef BTUI_OPS_FORMATS
@@ -863,11 +867,11 @@ and USER_HW_DISABLE_API macros */
 
 #if (BLUETOOTH_QCOM_SW == TRUE) /* Enable WBS only under this flag.*/
 #define BTM_WBS_INCLUDED            TRUE
-#else
+#endif
+
 /* Includes WBS if TRUE */
 #ifndef BTM_WBS_INCLUDED
 #define BTM_WBS_INCLUDED            FALSE       /* TRUE includes WBS code */
-#endif
 #endif
 
 /* Includes PCM2 support if TRUE */
