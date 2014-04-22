@@ -45,7 +45,7 @@
  **
  ** Function    bta_pan_pm_conn_busy
  **
- ** Description set pm connection busy state
+ ** Description set pan pm connection busy state
  **
  ** Params      p_scb: state machine control block of pan connection
  **
@@ -60,9 +60,9 @@ static void bta_pan_pm_conn_busy(tBTA_PAN_SCB *p_scb)
 
 /*******************************************************************************
  **
- ** Function    bta_pan_pm_conn_busy
+ ** Function    bta_pan_pm_conn_idle
  **
- ** Description set pm connection idle state
+ ** Description set pan pm connection idle state
  **
  ** Params      p_scb: state machine control block of pan connection
  **
